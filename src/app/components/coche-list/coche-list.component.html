@@ -1,0 +1,28 @@
+<div class="user-container">
+
+    <h2>Lista de Coches</h2>
+    <ul>
+      <li *ngFor="let pepito of coches">
+        {{ pepito.marca }} - {{ pepito.modelo }} - {{ pepito.color }}
+      </li>
+    </ul>
+    <h2>Lista de Usuarios - Formularios</h2>
+    <input type="text" [(ngModel)]="newMarca" placeholder="Marca">
+    <input type="text" [(ngModel)]="newModelo" placeholder="Modelo">
+    <input type="text" [(ngModel)]="newColor" placeholder="Color">
+    <button (click)="addCoche()">Agregar Coche</button>
+    
+    
+    <h2>Lista de Coches - CRUD</h2>
+    <!-- Lista de usuarios -->
+    <ul id="lista">
+        <li *ngFor="let coches of coches">
+          <span>{{ coches.marca }} - {{ coches.modelo }} - {{ coches.color }}</span>
+          
+          <button (click)="deleteCoche(coches.id)">❌ Eliminar</button>
+          <button (click)="updateCoche(coches.id)">✏️ Editar</button>
+          <button (click)="cocheDetails(coches.id)">📜 Mostrar Detalles</button>
+        </li>
+      </ul>
+    </div>
+    
