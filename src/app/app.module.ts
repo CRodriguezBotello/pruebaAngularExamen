@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CocheListComponent } from './components/coche-list/coche-list.component';
 import { FormsModule } from '@angular/forms';
+import { CochePipe } from './pipes/coche.pipe';
+import { CocheDirective } from './directives/coche.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CocheListComponent
+    CocheListComponent,
+    CochePipe,
+    CocheDirective
   ],
   imports: [
     BrowserModule,
